@@ -1,0 +1,5 @@
+C:\Users\farha\OneDrive\UCL_datamatiker\Budweg-9\ProjektBudweg\ProjektBudweg\obj\Debug\net6.0-windows\ProjektBudweg.csproj.AssemblyReference.cache
+C:\Users\farha\OneDrive\UCL_datamatiker\Budweg-9\ProjektBudweg\ProjektBudweg\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\farha\OneDrive\UCL_datamatiker\Budweg-9\ProjektBudweg\ProjektBudweg\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\farha\OneDrive\UCL_datamatiker\Budweg-9\ProjektBudweg\ProjektBudweg\obj\Debug\net6.0-windows\ProjektBudweg_MarkupCompile.cache
+C:\Users\farha\OneDrive\UCL_datamatiker\Budweg-9\ProjektBudweg\ProjektBudweg\obj\Debug\net6.0-windows\ProjektBudweg_MarkupCompile.lref

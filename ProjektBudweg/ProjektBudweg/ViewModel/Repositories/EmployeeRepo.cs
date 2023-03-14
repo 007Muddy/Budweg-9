@@ -91,7 +91,7 @@ namespace ProjektBudweg.ViewModel
 
         public Employee GetEmployeeByID(int id) 
         { 
-            Employee employee= null;
+            Employee employee1= null;
 
             try
             {
@@ -110,9 +110,9 @@ namespace ProjektBudweg.ViewModel
                           int EmployeeID = sqlReader.GetInt32(0);
                             string Department = sqlReader.GetString(1);
 
-                            Employee
+                            employee1 = new Employee(EmployeeID, Department);
 
-                            employeeRepo.Add(employee);
+                            employeeRepo.Add(employee1);
                         }
                     }
                 }
@@ -122,8 +122,38 @@ namespace ProjektBudweg.ViewModel
 
                 throw ex;
             }
+
+            return employee1;
         }
 
-        public void Delete (Employee employee) { }
+        public void Update (Employee employee)
+        {
+            try
+            {
+
+                using (SqlConnection sqlConnection = new SqlConnection(connectionString))
+                {
+                    sqlConnection.Open();
+
+                    using (SqlCommand sqlCommand = new SqlCommand("UPDATE TABLE Bud_Employee SET Department = @Department WHERE EmployeeID = @EmployeeID", sqlConnection))
+                    {
+                        sqlCommand.Parameters.AddWithValue("@Department", employee.Department);
+                        sqlCommand.Parameters.AddWithValue("")
+                        sqlCommand.ExecuteNonQuery();
+                    }
+                }
+
+            }
+            catch (SqlException e)
+            {
+
+                throw new Exception("An error occured while updating the Employee record.", e);
+            }
+        }
+
+        public void Delete (Employee employee) 
+        { 
+        
+        }
     }
 }

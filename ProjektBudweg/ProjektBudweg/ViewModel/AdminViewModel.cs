@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjektBudweg.ViewModel
 {
-    public jclass AdminViewModel
+    public class AdminViewModel
     {
     }
 }

@@ -8,24 +8,22 @@ namespace ProjektBudweg.Model
 {
    public class Message
     {
+        public int MessageID { get; set; }
         public string Type { get; set; }
         public DateTime Date { get; set; }
         public string Description { get; set; }
         public bool IsAnonym { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public int EmployeePhone { get; set; }
+      
 
 
-        public Message(string type, DateTime date, string description, bool isAnonym, string firstName, string lastName, int employeePhone)
+        public Message(int MessageID,string type, DateTime date, string description, bool isAnonym)
         {
+            this.MessageID = MessageID;
             Type = type;
             Date = date;
             Description = description;
             IsAnonym = isAnonym;
-            FirstName = firstName;
-            LastName = lastName;
-            EmployeePhone = employeePhone;
+         
         }
 
 

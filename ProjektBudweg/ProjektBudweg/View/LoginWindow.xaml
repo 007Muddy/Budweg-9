@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjektBudweg.View"
         mc:Ignorable="d"
-       Title="LoginWindow" Height="500" Width="900"
+        Title="LoginWindow" Height="500" Width="900"
         ResizeMode="NoReSize"
         WindowStyle="None"
         Background="#079C4E">
@@ -103,7 +103,7 @@
                 <Grid Grid.Column="1"
               Grid.Row="2">
                     <StackPanel Orientation="Horizontal" Margin="10,0,0,600">
-                        <Image Width="200" Height="200" Source="C:\Users\chris\OneDrive\Desktop\Budweg-9\ProjektBudweg\ProjektBudweg\images\BudwegLogo2.png" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="50" >
+                        <Image Width="200" Height="200" Source="C:\Users\chris\OneDrive\Desktop\Dagensopgaver\Budweg-9\ProjektBudweg\ProjektBudweg\images\BudwegLogo2.png" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="50" >
                             <Image.RenderTransform>
                                 <RotateTransform Angle="-50"></RotateTransform>
                             </Image.RenderTransform>

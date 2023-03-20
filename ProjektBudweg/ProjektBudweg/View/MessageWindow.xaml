@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjektBudweg.View"
         mc:Ignorable="d"
-        Title="MessageWindow" Height="500" Width="900"
+        Title="MessageWindow" Height="550" Width="900"
         ResizeMode="NoReSize"
         WindowStyle="None"
         Background="#079C4E">
@@ -194,6 +194,41 @@
                         </Style>
                     </TextBox.Resources>
                 </TextBox>
+            </StackPanel>
+            <StackPanel>
+                <Button Content="Submit"
+                        Foreground="DarkBlue"
+                        FontSize="25"
+                        FontWeight="Medium" Width="338"
+                        Margin="20,0,0,0" Click="Button_Click"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        >
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="TextElement.FontFamily" Value="D:\GitHub\Projekter\GUI practice\Fonts#Pacifico"/>
+                            <Setter Property="Background" Value="#FFD97D"/>
+                            <Setter Property="Cursor" Value="Hand"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#FF9B85"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border Width="125" Height="40"
+                                    CornerRadius="8"
+                                    Background="{TemplateBinding Background}">
+
+                                <ContentPresenter VerticalAlignment="Center"
+                                                  HorizontalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
             </StackPanel>
         </StackPanel>
 

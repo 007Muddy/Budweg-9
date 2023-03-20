@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjektBudweg.Model
 {
-  public  enum Risk
+  public enum Risk
     {
         Low,
         Medium,

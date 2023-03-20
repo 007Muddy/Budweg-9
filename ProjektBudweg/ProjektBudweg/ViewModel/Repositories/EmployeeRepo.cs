@@ -54,8 +54,6 @@ namespace ProjektBudweg.ViewModel
                 throw ex;
             }
         }
-
-
         // This method adds an employee to the database and the employee repository.
         // It takes an Employee object as input and returns an integer value to indicate
         // the result of the operation:

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjektBudweg.ViewModel
 {
-    class MessageViewModel
+    public class MessageViewModel
     {
     }
 }

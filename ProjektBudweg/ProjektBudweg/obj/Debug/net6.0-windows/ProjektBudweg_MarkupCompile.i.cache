@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\chris\OneDrive\Desktop\Dagensopgaver\Budweg-9\ProjektBudweg\ProjektBudweg\App.xaml
-5-1897870554
+6806053850
 
-252130353624
+26549646362
 196-286557035
-View\LoginWindow.xaml;View\MainWindow.xaml;View\RegisterAdminWindow.xaml;View\ReportWindow.xaml;View\WhistleBlowerWindow.xaml;
+View\LoginWindow.xaml;View\MainWindow.xaml;View\MessageWindow.xaml;View\RegisterAdminWindow.xaml;View\ReportWindow.xaml;View\WhistleBlowerWindow.xaml;
 
 True
 

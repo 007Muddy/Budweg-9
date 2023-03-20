@@ -1,4 +1,5 @@
 ﻿using ProjektBudweg.View;
+using ProjektBudweg.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,11 +22,12 @@ namespace ProjektBudweg
     /// </summary>
     public partial class MainWindow : Window
     {
+       
+
         public MainWindow()
         {
             InitializeComponent();
         }
-
 
         private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -35,12 +37,16 @@ namespace ProjektBudweg
             }
         }
 
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            LoginWindow loginWindow = new LoginWindow();
+            LoginWindow lw = new LoginWindow();
+            lw.Show();
+        }
 
-            loginWindow.Show();
+        private void Button_Click2(object sender, RoutedEventArgs e)
+        {
+            MessageWindow mw = new MessageWindow();
+            mw.Show();
         }
     }
 }

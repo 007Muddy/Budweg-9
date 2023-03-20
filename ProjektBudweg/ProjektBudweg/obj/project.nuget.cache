@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hDs1gOtC6BT06+0ZOdLKVwc3R5C57CIr7QNtoXpPLKrmS9khiopuPWmFTNs3EfotRiJsCQLNUW8NKiNsgPQW4A==",
+  "dgSpecHash": "pxv4ZDY56cGfy0BTt2ecAoeMGW1bc+DmYvjzL1C/r+Nq2XPzyFcnY2qj2UJD3mGvFOfoj5ViJrQ+zAWMPHePgQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\chris\\OneDrive\\Desktop\\Budweg-9\\ProjektBudweg\\ProjektBudweg\\ProjektBudweg.csproj",
+  "projectFilePath": "C:\\Users\\chris\\OneDrive\\Desktop\\Dagensopgaver\\Budweg-9\\ProjektBudweg\\ProjektBudweg\\ProjektBudweg.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\chris\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\chris\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

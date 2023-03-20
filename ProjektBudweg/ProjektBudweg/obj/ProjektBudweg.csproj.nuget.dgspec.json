@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\chris\\OneDrive\\Desktop\\Budweg-9\\ProjektBudweg\\ProjektBudweg\\ProjektBudweg.csproj": {}
+    "C:\\Users\\chris\\OneDrive\\Desktop\\Dagensopgaver\\Budweg-9\\ProjektBudweg\\ProjektBudweg\\ProjektBudweg.csproj": {}
   },
   "projects": {
-    "C:\\Users\\chris\\OneDrive\\Desktop\\Budweg-9\\ProjektBudweg\\ProjektBudweg\\ProjektBudweg.csproj": {
+    "C:\\Users\\chris\\OneDrive\\Desktop\\Dagensopgaver\\Budweg-9\\ProjektBudweg\\ProjektBudweg\\ProjektBudweg.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\chris\\OneDrive\\Desktop\\Budweg-9\\ProjektBudweg\\ProjektBudweg\\ProjektBudweg.csproj",
+        "projectUniqueName": "C:\\Users\\chris\\OneDrive\\Desktop\\Dagensopgaver\\Budweg-9\\ProjektBudweg\\ProjektBudweg\\ProjektBudweg.csproj",
         "projectName": "ProjektBudweg",
-        "projectPath": "C:\\Users\\chris\\OneDrive\\Desktop\\Budweg-9\\ProjektBudweg\\ProjektBudweg\\ProjektBudweg.csproj",
+        "projectPath": "C:\\Users\\chris\\OneDrive\\Desktop\\Dagensopgaver\\Budweg-9\\ProjektBudweg\\ProjektBudweg\\ProjektBudweg.csproj",
         "packagesPath": "C:\\Users\\chris\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\chris\\OneDrive\\Desktop\\Budweg-9\\ProjektBudweg\\ProjektBudweg\\obj\\",
+        "outputPath": "C:\\Users\\chris\\OneDrive\\Desktop\\Dagensopgaver\\Budweg-9\\ProjektBudweg\\ProjektBudweg\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\chris\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\chris\OneDrive\Desktop\Budweg-9\ProjektBudweg\ProjektBudweg\obj\Debug\net6.0-windows\
+C:\Users\chris\OneDrive\Desktop\Dagensopgaver\Budweg-9\ProjektBudweg\ProjektBudweg\obj\Debug\net6.0-windows\
 ProjektBudweg
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-C:\Users\chris\OneDrive\Desktop\Budweg-9\ProjektBudweg\ProjektBudweg\App.xaml
-11407045341
+C:\Users\chris\OneDrive\Desktop\Dagensopgaver\Budweg-9\ProjektBudweg\ProjektBudweg\App.xaml
+5-1897870554
 
-18-1981175965
+252130353624
 196-286557035
-MainWindow.xaml;
+View\LoginWindow.xaml;View\MainWindow.xaml;View\RegisterAdminWindow.xaml;View\ReportWindow.xaml;View\WhistleBlowerWindow.xaml;
 
 True
 

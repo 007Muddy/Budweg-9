@@ -138,7 +138,7 @@ namespace ProjektBudweg.ViewModel
                     using (SqlCommand sqlCommand = new SqlCommand("UPDATE TABLE Bud_Employee SET Department = @Department WHERE EmployeeID = @EmployeeID", sqlConnection))
                     {
                         sqlCommand.Parameters.AddWithValue("@Department", employee.Department);
-                        sqlCommand.Parameters.AddWithValue("")
+                       // sqlCommand.Parameters.AddWithValue("")
                         sqlCommand.ExecuteNonQuery();
                     }
                 }

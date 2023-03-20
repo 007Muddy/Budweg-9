@@ -10,19 +10,27 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ProjektBudweg
+namespace ProjektBudweg.View
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for WhistleBlowerWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class WhistleBlowerWindow : Window
     {
-        public MainWindow()
+        public WhistleBlowerWindow()
         {
             InitializeComponent();
+        }
+
+
+        private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                DragMove();
+            }
         }
     }
 }

@@ -20,11 +20,12 @@ namespace ProjektBudweg.View
     /// </summary>
     public partial class RegisterAdminWindow : Window
     {
-        public AdminViewModel avm { get; set; }
+        public RegisterAdminWindow avm { get; set; }
+
         public RegisterAdminWindow()
         {
             InitializeComponent();
-            avm = new AdminViewModel();
+            avm = new RegisterAdminWindow();
             DataContext = avm;
 
         }
@@ -33,6 +34,8 @@ namespace ProjektBudweg.View
         {
             if (txtUsername != null && txtPassword == txtPassword2)
             {
+                
+
                 avm.CreateNewUser(txtUsername.Text, txtPassword.Text);
 
 

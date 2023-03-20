@@ -12,6 +12,8 @@ namespace ProjektBudweg.ViewModel
         public string? Password { get; set; }
         public string? LoginMessage { get; private set; }
 
+
+
         public bool CreateNewUser(string username, string password)
         {
             bool RegisterSucces = false;

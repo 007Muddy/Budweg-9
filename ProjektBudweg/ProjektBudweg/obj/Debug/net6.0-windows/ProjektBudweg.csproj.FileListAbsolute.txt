@@ -11,8 +11,21 @@ C:\Users\chris\OneDrive\Desktop\Budweg-9\ProjektBudweg\ProjektBudweg\obj\Debug\n
 C:\Users\chris\OneDrive\Desktop\Budweg-9\ProjektBudweg\ProjektBudweg\obj\Debug\net6.0-windows\App.g.cs
 C:\Users\chris\OneDrive\Desktop\Budweg-9\ProjektBudweg\ProjektBudweg\obj\Debug\net6.0-windows\ProjektBudweg_MarkupCompile.cache
 C:\Users\chris\OneDrive\Desktop\Budweg-9\ProjektBudweg\ProjektBudweg\obj\Debug\net6.0-windows\ProjektBudweg_MarkupCompile.lref
+<<<<<<< HEAD
+C:\Users\chris\OneDrive\Desktop\Dagensopgaver\Budweg-9\ProjektBudweg\ProjektBudweg\obj\Debug\net6.0-windows\ProjektBudweg.csproj.AssemblyReference.cache
+C:\Users\chris\OneDrive\Desktop\Dagensopgaver\Budweg-9\ProjektBudweg\ProjektBudweg\obj\Debug\net6.0-windows\View\LoginWindow.g.cs
+C:\Users\chris\OneDrive\Desktop\Dagensopgaver\Budweg-9\ProjektBudweg\ProjektBudweg\obj\Debug\net6.0-windows\View\MainWindow.g.cs
+C:\Users\chris\OneDrive\Desktop\Dagensopgaver\Budweg-9\ProjektBudweg\ProjektBudweg\obj\Debug\net6.0-windows\View\RegisterAdminWindow.g.cs
+C:\Users\chris\OneDrive\Desktop\Dagensopgaver\Budweg-9\ProjektBudweg\ProjektBudweg\obj\Debug\net6.0-windows\View\ReportWindow.g.cs
+C:\Users\chris\OneDrive\Desktop\Dagensopgaver\Budweg-9\ProjektBudweg\ProjektBudweg\obj\Debug\net6.0-windows\View\WhistleBlowerWindow.g.cs
+C:\Users\chris\OneDrive\Desktop\Dagensopgaver\Budweg-9\ProjektBudweg\ProjektBudweg\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\chris\OneDrive\Desktop\Dagensopgaver\Budweg-9\ProjektBudweg\ProjektBudweg\obj\Debug\net6.0-windows\ProjektBudweg_MarkupCompile.cache
+C:\Users\chris\OneDrive\Desktop\Dagensopgaver\Budweg-9\ProjektBudweg\ProjektBudweg\obj\Debug\net6.0-windows\ProjektBudweg_MarkupCompile.lref
+C:\Users\chris\OneDrive\Desktop\Dagensopgaver\Budweg-9\ProjektBudweg\ProjektBudweg\obj\Debug\net6.0-windows\View\MessageWindow.g.cs
+=======
 C:\Users\farha\OneDrive\UCL_datamatiker\Budweg-9\ProjektBudweg\ProjektBudweg\obj\Debug\net6.0-windows\View\LoginWindow.g.cs
 C:\Users\farha\OneDrive\UCL_datamatiker\Budweg-9\ProjektBudweg\ProjektBudweg\obj\Debug\net6.0-windows\View\MainWindow.g.cs
 C:\Users\farha\OneDrive\UCL_datamatiker\Budweg-9\ProjektBudweg\ProjektBudweg\obj\Debug\net6.0-windows\View\RegisterAdminWindow.g.cs
 C:\Users\farha\OneDrive\UCL_datamatiker\Budweg-9\ProjektBudweg\ProjektBudweg\obj\Debug\net6.0-windows\View\ReportWindow.g.cs
 C:\Users\farha\OneDrive\UCL_datamatiker\Budweg-9\ProjektBudweg\ProjektBudweg\obj\Debug\net6.0-windows\View\WhistleBlowerWindow.g.cs
+>>>>>>> 1ea47b8c4d04998bd23fed44caa9cc040e2f2135

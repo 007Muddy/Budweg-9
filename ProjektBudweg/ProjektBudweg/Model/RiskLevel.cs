@@ -12,9 +12,9 @@ namespace ProjektBudweg.Model
 
         public enum Risk
         {
-            Low,
-            Medium,
-            Cirtical
+            Feedback,
+            Fare,
+            Whistleblower
         }
 
         public RiskLevel(Risk risk)

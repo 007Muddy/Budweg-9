@@ -26,15 +26,16 @@ namespace ProjektBudweg.View
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-           // LoginWindow lw = new LoginWindow();
-            RegisterAdminWindow raw = new RegisterAdminWindow();
-            raw.Show();
+            LoginWindow lw = new LoginWindow();            
+            lw.Show();
+            this.Hide();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             MessageWindow mw = new MessageWindow();
             mw.Show();
+            this.Hide();
         }
     }
 }

@@ -6,27 +6,26 @@ using System.Threading.Tasks;
 
 namespace ProjektBudweg.Model
 {
-   public class Message
+    public class Message : Identity
     {
-        public int MessageID { get; set; }
+
         public string Type { get; set; }
         public DateTime Date { get; set; }
         public string Description { get; set; }
-        public bool IsAnonym { get; set; }
-      
+        public string Department { get; set; }
 
 
-        public Message(int MessageID,string type, DateTime date, string description, bool isAnonym)
+
+
+        public Message(string name, string lastname, string type, string department, DateTime date, string description)
         {
-            this.MessageID = MessageID;
+            Name = name;
+            Lastname = lastname;
             Type = type;
+            Department = department;
             Date = date;
             Description = description;
-            IsAnonym = isAnonym;
-         
         }
 
-
-
     }
-} 
+}

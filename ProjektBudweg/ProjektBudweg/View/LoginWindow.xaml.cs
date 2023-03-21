@@ -38,21 +38,41 @@ namespace ProjektBudweg.View
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if(txtUsername.Text.Length > 0 && txtUsername.Text.Length > 0) 
+            if (txtUsername.Text.Length > 0 && txtUsername.Text.Length > 0)
             {
-                if(avm.AccessGranted(txtUsername.Text, txtPassword.Password))
+                if (avm.AccessGranted(txtUsername.Text, txtPassword.Password))
                 {
-                    
+
                     MessageBox.Show(avm.LoginMessage);
-                    RegisterAdminWindow raw = new RegisterAdminWindow();
-                    raw.Show();
+
+                    DangerWindow rw = new DangerWindow();
+                    WhistleBlowerWindow wbw = new WhistleBlowerWindow();
+
+                    if (avm.Role == "HR")
+                    {
+                        rw.Show();
+                        this.Hide();
+                    }
+                    else if(avm.Role == "Direktør")
+                    {
+                        wbw.Show();
+                        this.Hide();
+                    }
+
                 }
-                else 
-                { 
+                else
+                {
                     MessageBox.Show(avm.LoginMessage);
                 }
 
             }
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            MainWindow mw = new MainWindow();
+            mw.Show();
+            this.Hide();
         }
     }
 }

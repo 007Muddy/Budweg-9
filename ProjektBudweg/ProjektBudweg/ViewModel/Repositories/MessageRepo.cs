@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -11,37 +12,43 @@ namespace ProjektBudweg.ViewModel
 {
     public class MessageRepo
     {
-        private List<Message> messageRepo = new List<Message>();
 
         private string connectionString { get; } = ConfigurationManager.ConnectionStrings["MyDatabaseConnectionString"].ConnectionString;
         //Loading all messages from database(P1_DB_2023_09) and polulating into messageRepo
         public MessageRepo()
         {
+           
+        }
+
+        //Return all messages from repo, so we can access it from other classes
+  
+
+        public bool AddMessage(string name, string lastName, string msgType, string department, DateTime date, string msg)
+        {
+            bool addSucces = false;
             try
             {
-                using (SqlConnection sqlConnection = new SqlConnection(connectionString))
+
+                using (SqlConnection sq = new SqlConnection(connectionString))
                 {
-                    sqlConnection.Open();
-
-                    using (SqlCommand sqlCommand = new SqlCommand("SELECT * FROM Bud_Message", sqlConnection))
+                    sq.Open();
+                    using (SqlCommand cmd = new SqlCommand("INSERT INTO Budweg_Message (Name, Lastname, MessageType, Department, Date, Message)" +
+                        "VALUES(@name, @lastName, @messageType, @department, @date, @message)", sq))
                     {
-                        SqlDataReader sqlReader = sqlCommand.ExecuteReader();
+                        cmd.Parameters.Add("@name", SqlDbType.NVarChar).Value = name;
+                        cmd.Parameters.Add("@lastName", SqlDbType.NVarChar).Value = lastName;
+                        cmd.Parameters.Add("@messageType", SqlDbType.NVarChar).Value = msgType;
+                        cmd.Parameters.Add("@department", SqlDbType.NVarChar).Value = department;
+                        cmd.Parameters.Add("@date", SqlDbType.DateTime).Value = date;
+                        cmd.Parameters.Add("@message", SqlDbType.NVarChar).Value = msg;
+                        cmd.ExecuteNonQuery();
+                  
+                        addSucces = true;
+                        return addSucces;
 
-                        while (sqlReader.Read())
-                        {
-
-                            int MessageID = sqlReader.GetInt32(0);
-                            string Type = sqlReader.GetString(1);
-                            DateTime Date = sqlReader.GetDateTime(2);
-                            string Description = sqlReader.GetString(3);
-                            bool IsAnonym = sqlReader.GetBoolean(4);
-
-                            Message message = new Message(MessageID, Type, Date, Description, IsAnonym);
-                            messageRepo.Add(message);
-
-                        }
                     }
                 }
+
             }
             catch (SqlException ex)
             {
@@ -50,11 +57,6 @@ namespace ProjektBudweg.ViewModel
             }
         }
 
-        //Return all messages from repo, so we can access it from other classes
-        public List<Message> GeAllMessages()
-        {
-            return messageRepo;
-        }
 
         public void Update(Message message)
         {

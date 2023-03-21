@@ -1,4 +1,5 @@
 ﻿using ProjektBudweg.Model;
+using ProjektBudweg.ViewModel.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -13,9 +14,7 @@ namespace ProjektBudweg.ViewModel
     {
 
         private Message message { get; set; }
-        //private DangerRepo dangerRepo = new DangerRepo();
-        //private FeedbackRepo feedbackRepo = new FeedbackRepo();
-        //private WhistleBlowerRepo whitleblowerRepo = new WhistleBlowerRepo();
+        private MessageRepo _messageRepo = new MessageRepo();
 
         public ObservableCollection<Department.DepartmentArea> DepartmentList { get; private set; }
 
@@ -87,6 +86,27 @@ namespace ProjektBudweg.ViewModel
 
                 throw;
             }
+        }
+
+
+        public bool AddMessage(string name, string lastName, string msg)
+        {
+            bool messageTransmitted = false;
+            DateTime date = DateTime.Now;
+            try
+            {
+                if (name != null && lastName != null && RiskLevel != null && DepartmentArea != null && msg != null)
+                {
+                    _messageRepo.AddMessage(name, lastName, RiskLevel, DepartmentArea, date, msg);
+                    messageTransmitted = true;
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return messageTransmitted;
         }
 
     }

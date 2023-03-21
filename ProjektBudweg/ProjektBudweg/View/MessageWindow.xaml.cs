@@ -34,26 +34,54 @@ namespace ProjektBudweg.View
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            if(txtName != null && txtLastName!= null && ComboMsgType != null && ComboDepartment != null && txtMsg != null)
+            {            
+                if(mvm.AddMessage(txtName.Text, txtLastName.Text, txtMsg.Text))
+                {
+                    MessageBox.Show("Message was succesfully added");
+                    txtName.Text = "";
+                    txtLastName.Text = "";
+                    ComboMsgType.Text = "";
+                    ComboDepartment.Text = "";
+                    IsAnonym.IsChecked = false;
+                    NotAnonym.IsChecked = false;
+                    txtMsg.Text = "";
+                }
+            } 
+            else
+            {
 
+                MessageBox.Show("Every field has to be filled");
+            }
         }
 
-        //private void IsAnonym_Checked(object sender, RoutedEventArgs e)
-        //{
-        //    if (IsAnonym.IsChecked == true)
-        //    {
-        //        txtName.IsEnabled = false;
-        //        txtLast.IsEnabled = false;
+        private void IsAnonym_Checked(object sender, RoutedEventArgs e)
+        {
+            if(IsAnonym.IsChecked== true)
+            {
+                txtName.IsEnabled = false;
+                txtLastName.IsEnabled = false;
 
-        //        NotAnonym.IsChecked = false;
-        //    }
-        //    else if (NotAnonym.IsChecked == true)
+                NotAnonym.IsChecked = false;
+            }          
+        }
 
-        //    {
-        //        txtName.IsEnabled = true;
-        //        txtLast.IsEnabled = true;
+        private void NotAnonym_Checked(object sender, RoutedEventArgs e)
+        {
+            if (NotAnonym.IsChecked == true)
+            {
+                txtName.IsEnabled = true;
+                txtLastName.IsEnabled = true;
 
-        //        IsAnonym.IsChecked = false;
-        //    }
-        //}
+                IsAnonym.IsChecked = false;
+            }
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            MainWindow mw = new MainWindow();
+            mw.Show();
+            this.Hide();
+        }
     }
 }

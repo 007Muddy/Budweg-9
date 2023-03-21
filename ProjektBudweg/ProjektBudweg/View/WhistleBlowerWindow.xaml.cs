@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjektBudweg.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,12 @@ namespace ProjektBudweg.View
     /// </summary>
     public partial class WhistleBlowerWindow : Window
     {
+        public WhistleBlowerViewModel wvm { get; set; }
         public WhistleBlowerWindow()
         {
             InitializeComponent();
+            wvm= new WhistleBlowerViewModel();
+            DataContext = wvm;
         }
 
 
@@ -35,7 +39,16 @@ namespace ProjektBudweg.View
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            RegisterAdminWindow raw = new RegisterAdminWindow();
+            raw.Show();
+            this.Hide();
+        }
 
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            MainWindow mw = new MainWindow();
+            mw.Show();
+            this.Hide();
         }
     }
 }

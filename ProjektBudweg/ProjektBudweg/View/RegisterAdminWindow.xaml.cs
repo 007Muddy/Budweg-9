@@ -38,9 +38,10 @@ namespace ProjektBudweg.View
                 if (txtPassword.Password == txtPassword2.Password)
                 {
 
-                    AdminViewModel avm = new AdminViewModel();
 
-                    if (avm.CreateNewUser(txtUsername.Text, txtPassword.Password, ComboRoleType.Text))
+                    awm.SelectedRole = ComboRoleType.Text;
+
+                    if (awm.CreateNewUser(txtUsername.Text, txtPassword.Password))
                     {
                         MessageBox.Show("You have successfully registered");
                         txtUsername.Clear();
@@ -53,6 +54,13 @@ namespace ProjektBudweg.View
             {
                 MessageBox.Show("Every field has to be filled");
             }
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            MainWindow mw = new MainWindow();
+            mw.Show();
+            this.Hide();
         }
     }
 }

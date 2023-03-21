@@ -15,6 +15,7 @@ namespace ProjektBudweg.ViewModel.Repositories
     {
         private Admin admin { get; set; }
         private int _id;
+        public string Role { get; set; } = "";
         private string connectionString { get; } = ConfigurationManager.ConnectionStrings["MyDatabaseConnectionString"].ConnectionString;
 
 
@@ -88,26 +89,23 @@ namespace ProjektBudweg.ViewModel.Repositories
                     }
 
 
-                    //if (accepted)
-                    //{
-                    //    //using (SqlConnection sq2 = new SqlConnection(ConnectionString))
-                    //    //{
-                    //    //    sq2.Open();
-                    //    using (SqlCommand cmd2 = new SqlCommand("UPDATE Users SET Mood = @mood " +
-                    //        "WHERE Username = @username", sq))
-                    //    {
+                    using (SqlCommand cmd = new SqlCommand("SELECT Role FROM Budweg_Admin WHERE UserName = @username", sq))
+                    {
+                        cmd.Parameters.Add("@username", SqlDbType.NVarChar).Value = admin.UserName;
 
-                    //        cmd2.Parameters.AddWithValue("@mood", mood);
-                    //        cmd2.Parameters.Add("@mood", SqlDbType.NVarChar).Value = mood;
-                    //        cmd2.Parameters.AddWithValue("@username", username);
-                    //        cmd2.ExecuteNonQuery();
-                    //    }
+                        SqlDataReader reader= cmd.ExecuteReader();
 
-                    //}
-                    //}
+                        if (reader.Read())
+                        {
+                            Role = reader.GetString(0);
+                        }
+
+                        reader.Close(); 
+
+                        
+                    }
+
                 }
-
-                //Update Mood to the employee
             }
             catch (Exception ex)
             {
@@ -149,22 +147,22 @@ namespace ProjektBudweg.ViewModel.Repositories
 
                 //I can use this line of code to increment the id Count
                 //To then later set the UserId to id, to get the proper UserId number
-                _id = 1;
-                using (SqlConnection sq = new SqlConnection(connectionString))
-                {
-                    sq.Open();
+                //_id = 1;
+                //using (SqlConnection sq = new SqlConnection(connectionString))
+                //{
+                //    sq.Open();
 
-                    using (SqlCommand cmd = new SqlCommand("SELECT * FROM Budweg_Admin", sq))
-                    {
-                        using (SqlDataReader sar = cmd.ExecuteReader())
-                        {
-                            while (sar.Read())
-                            {
-                                _id++;
-                            }
-                        }
-                    }
-                }
+                //    using (SqlCommand cmd = new SqlCommand("SELECT * FROM Budweg_Admin", sq))
+                //    {
+                //        using (SqlDataReader sar = cmd.ExecuteReader())
+                //        {
+                //            while (sar.Read())
+                //            {
+                //                _id++;
+                //            }
+                //        }
+                //    }
+                //}
 
                 //A New SqlConnection object is created
                 using (SqlConnection sqlConnection = new SqlConnection(connectionString))

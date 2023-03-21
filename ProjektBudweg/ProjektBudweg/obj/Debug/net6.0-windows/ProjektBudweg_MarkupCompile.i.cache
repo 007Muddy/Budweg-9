@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\chris\OneDrive\Desktop\Dagensopgaver\Budweg-9\ProjektBudweg\ProjektBudweg\App.xaml
-6806053850
+7-699794245
 
-28-729432302
+36-1562649860
 196-286557035
-View\LoginWindow.xaml;View\MainWindow.xaml;View\MessageWindow.xaml;View\RegisterAdminWindow.xaml;View\ReportWindow.xaml;View\WhistleBlowerWindow.xaml;
+View\DangerWindow.xaml;View\FeedbackWindow.xaml;View\LoginWindow.xaml;View\MainWindow.xaml;View\MessageWindow.xaml;View\RegisterAdminWindow.xaml;View\WhistleBlowerWindow.xaml;
 
 True
 

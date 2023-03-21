@@ -18,6 +18,7 @@ namespace ProjektBudweg.ViewModel
         public string Username { get; set; }
         public string Password { get; set; }
         public string LoginMessage { get; private set; }
+        public string Role { get; private set; }
 
 
 
@@ -30,11 +31,10 @@ namespace ProjektBudweg.ViewModel
             get { return selectedRole; }
             set 
             {
-                if (value == selectedRole)
-                {
+                
                     selectedRole = value;
-                    NotifyPropertyChanged(nameof(SelectedRole));
-                }              
+                    OnPropertyChanged(nameof(SelectedRole));
+                            
             }
         }
         public AdminViewModel()
@@ -62,8 +62,9 @@ namespace ProjektBudweg.ViewModel
 
                     if (adminRepo.AuthenticateUser(ad) == true)
                     {
-                        LoginMessage = $"Login was successfull: Welcome {username}";
-                        acces= true;
+                        LoginMessage = $"Login was successfull: Welcome {username}";                       
+                        acces = true;
+                        Role = adminRepo.Role;
                     }
                     else
                     {
@@ -80,14 +81,14 @@ namespace ProjektBudweg.ViewModel
 
 
 
-        public bool CreateNewUser(string username, string password, string role)
+        public bool CreateNewUser(string username, string password)
         {
             bool RegisterSucces = false;
             try
             {
-                if (username != null && password != null && role != null)
+                if (username != null && password != null && SelectedRole != null)
                 {
-                    adminRepo.Add(username, password, role);
+                    adminRepo.Add(username, password, SelectedRole);
                     RegisterSucces = true;
                     LoginMessage = $"Login was successfull: Welcome {username}";
 
@@ -128,7 +129,7 @@ namespace ProjektBudweg.ViewModel
 
         public event PropertyChangedEventHandler? PropertyChanged;
 
-        private void NotifyPropertyChanged(string propertyName)
+        private void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }

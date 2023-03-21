@@ -7,6 +7,12 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="View\DangerWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\FeedbackWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\LoginWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -19,14 +25,17 @@
     <Compile Update="View\RegisterAdminWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="View\ReportWindow.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="View\WhistleBlowerWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="View\DangerWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\FeedbackWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="View\LoginWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -37,9 +46,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\RegisterAdminWindow.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="View\ReportWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\WhistleBlowerWindow.xaml">

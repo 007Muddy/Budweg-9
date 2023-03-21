@@ -34,9 +34,9 @@ namespace ProjektBudweg.View
         {
             if (txtUsername != null && txtPassword == txtPassword2)
             {
-                
+                RegisterAdminViewModel a = new RegisterAdminViewModel();
 
-                avm.CreateNewUser(txtUsername.Text, txtPassword.Text);
+                a.CreateNewUser(txtUsername.Text, txtPassword.Text);
 
 
             }

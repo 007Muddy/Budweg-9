@@ -13,9 +13,9 @@ namespace ProjektBudweg.ViewModel
     {
 
         private Message message { get; set; }
-        private DangerRepo dangerRepo = new DangerRepo();
-        private FeedbackRepo feedbackRepo = new FeedbackRepo();
-        private WhistleBlowerRepo whitleblowerRepo = new WhistleBlowerRepo();
+        //private DangerRepo dangerRepo = new DangerRepo();
+        //private FeedbackRepo feedbackRepo = new FeedbackRepo();
+        //private WhistleBlowerRepo whitleblowerRepo = new WhistleBlowerRepo();
 
         public ObservableCollection<Department.DepartmentArea> DepartmentList { get; private set; }
 

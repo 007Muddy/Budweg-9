@@ -23,7 +23,7 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <Grid Background="#084016" Grid.ColumnSpan="3" MouseDown="Grid_MouseDown">
+        <Grid Background="#084016" Grid.ColumnSpan="3">
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>

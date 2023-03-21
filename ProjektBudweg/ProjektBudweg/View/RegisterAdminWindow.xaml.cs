@@ -20,25 +20,38 @@ namespace ProjektBudweg.View
     /// </summary>
     public partial class RegisterAdminWindow : Window
     {
-        public RegisterAdminWindow avm { get; set; }
+        public AdminViewModel awm { get; set; }
 
         public RegisterAdminWindow()
         {
             InitializeComponent();
-            avm = new RegisterAdminWindow();
-            DataContext = avm;
+            awm = new AdminViewModel();
+            DataContext = awm;
+            awm.ShowEnumList();
 
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (txtUsername != null && txtPassword == txtPassword2)
+            if (txtUsername != null && txtPassword != null && txtPassword2 != null && ComboRoleType != null)
             {
-                RegisterAdminViewModel a = new RegisterAdminViewModel();
+                if (txtPassword.Password == txtPassword2.Password)
+                {
 
-                a.CreateNewUser(txtUsername.Text, txtPassword.Text);
+                    AdminViewModel avm = new AdminViewModel();
 
-
+                    if (avm.CreateNewUser(txtUsername.Text, txtPassword.Password, ComboRoleType.Text))
+                    {
+                        MessageBox.Show("You have successfully registered");
+                        txtUsername.Clear();
+                        txtPassword.Clear();
+                        txtPassword2.Clear();
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Every field has to be filled");
             }
         }
     }

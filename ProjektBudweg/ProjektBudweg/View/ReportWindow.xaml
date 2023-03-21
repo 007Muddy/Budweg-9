@@ -38,12 +38,12 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Button Content="Budweg"
+            <Button Content="Register"
                         Foreground="AntiqueWhite"
                         FontSize="25"
                         FontWeight="Medium"
                         Margin="0,0,10,0"
-                        Grid.Column="1"
+                        Grid.Column="8"
                         Grid.ColumnSpan="3">
                 <Button.Style>
                     <Style TargetType="Button">
@@ -76,7 +76,6 @@
 
 
         </Grid>
-
 
 
         <Grid Grid.Column="2"

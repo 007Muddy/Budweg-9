@@ -147,13 +147,13 @@
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="0,0,0,20" VerticalAlignment="Center" RenderTransformOrigin="0.642,0.556">
                     <TextBlock Text="Password" Foreground="White" FontSize="20" FontWeight="Medium" VerticalAlignment="Center"/>
-                    <TextBox x:Name="txtPassword" TextWrapping="Wrap" Text="" Width="216" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="100,0,00,0">
-                        <TextBox.Resources>
+                    <PasswordBox x:Name="txtPassword" Width="216" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="100,0,00,0" PasswordChar="*">
+                        <PasswordBox.Resources>
                             <Style TargetType="{x:Type Border}">
                                 <Setter Property="CornerRadius" Value="10"/>
                             </Style>
-                        </TextBox.Resources>
-                    </TextBox>
+                        </PasswordBox.Resources>
+                    </PasswordBox>
                 </StackPanel>
             </StackPanel>
             <StackPanel>

@@ -14,14 +14,14 @@ namespace ProjektBudweg.ViewModel
 
 
 
-        public bool CreateNewUser(string username, string password)
+        public bool CreateNewUser(string username, string password, string role)
         {
             bool RegisterSucces = false;
             try
             {
                 if (username != null && password != null)
                 {
-                    adminRepo.Add(username, password);
+                    adminRepo.Add(username, password, role);
                     RegisterSucces = true;
                     LoginMessage = $"Login was successfull: Welcome {username}";
 

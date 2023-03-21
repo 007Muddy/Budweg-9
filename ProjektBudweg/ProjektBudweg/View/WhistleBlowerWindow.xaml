@@ -23,6 +23,7 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
+
         <Grid Background="#084016" Grid.ColumnSpan="3">
 
             <Grid.ColumnDefinitions>
@@ -38,13 +39,13 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Button Content="Budweg"
+            <Button Content="Register"
                         Foreground="AntiqueWhite"
                         FontSize="25"
                         FontWeight="Medium"
                         Margin="0,0,10,0"
-                        Grid.Column="1"
-                        Grid.ColumnSpan="3">
+                        Grid.Column="8"
+                        Grid.ColumnSpan="3" Click="Button_Click">
                 <Button.Style>
                     <Style TargetType="Button">
                         <Setter Property="TextElement.FontFamily" Value="D:\GitHub\Projekter\GUI practice\Fonts#Pacifico"/>

@@ -15,7 +15,7 @@ namespace ProjektBudweg.ViewModel.Repositories
     {
         private Admin admin { get; set; }
         private int _id;
-        private string connectionString { get; } = ConfigurationManager.ConnectionStrings["Bud_Employee"].ConnectionString;
+        private string connectionString { get; } = ConfigurationManager.ConnectionStrings["MyDatabaseConnectionString"].ConnectionString;
 
 
         //Check for authentication and return a bool
@@ -34,7 +34,7 @@ namespace ProjektBudweg.ViewModel.Repositories
                 using (SqlConnection sq = new SqlConnection(connectionString))
                 {
                     sq.Open();
-                    using (SqlCommand cmd = new SqlCommand("SELECT UserName, Password FROM Bud_Admin", sq))
+                    using (SqlCommand cmd = new SqlCommand("SELECT UserName, Password FROM Budweg_Admin", sq))
                     {
                         using (SqlDataReader reader = cmd.ExecuteReader())
                         {
@@ -117,7 +117,7 @@ namespace ProjektBudweg.ViewModel.Repositories
         }
 
 
-        public void Add(string username, string password)
+        public void Add(string username, string password, string role)
         {
 
             try
@@ -154,7 +154,7 @@ namespace ProjektBudweg.ViewModel.Repositories
                 {
                     sq.Open();
 
-                    using (SqlCommand cmd = new SqlCommand("SELECT * FROM Users", sq))
+                    using (SqlCommand cmd = new SqlCommand("SELECT * FROM Budweg_Admin", sq))
                     {
                         using (SqlDataReader sar = cmd.ExecuteReader())
                         {
@@ -171,13 +171,14 @@ namespace ProjektBudweg.ViewModel.Repositories
                 {
                     sqlConnection.Open();
                     //We use SqlCommand class to create an SQL INSERT Statement
-                    using (SqlCommand command = new SqlCommand("INSERT INTO Users (Username, Password) " +
-                        "VALUES(@username, @password, @firstName, @lastName, @mood)", sqlConnection))
+                    using (SqlCommand command = new SqlCommand("INSERT INTO Budweg_Admin (Username, Password, Role) " +
+                        "VALUES(@username, @password, @role)", sqlConnection))
                     {
 
                         // command.Parameters.AddWithValue("@userId", _id);
-                        command.Parameters.AddWithValue("@username", username);
-                        command.Parameters.AddWithValue("@password", hashedPassword);
+                        command.Parameters.Add("@username", SqlDbType.NVarChar).Value = username;
+                        command.Parameters.Add("@password", SqlDbType.NVarChar).Value = hashedPassword;
+                        command.Parameters.Add("@role", SqlDbType.NVarChar).Value = role;
                         command.ExecuteNonQuery();
                     }
                 }

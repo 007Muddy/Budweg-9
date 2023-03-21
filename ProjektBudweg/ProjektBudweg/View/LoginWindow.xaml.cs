@@ -40,8 +40,9 @@ namespace ProjektBudweg.View
         {
             if(txtUsername.Text.Length > 0 && txtUsername.Text.Length > 0) 
             {
-                if(avm.AccessGranted(txtUsername.Text, txtUsername.Text))
+                if(avm.AccessGranted(txtUsername.Text, txtPassword.Password))
                 {
+                    
                     MessageBox.Show(avm.LoginMessage);
                     RegisterAdminWindow raw = new RegisterAdminWindow();
                     raw.Show();
